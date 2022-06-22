@@ -14,19 +14,19 @@ import java.util.Date;
 @Table(name="Declaracao")
 public class DeclaracaoUsuario {
 
-    /*
+/*
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name="ID",unique = true)
     private Long id;
-    */
+*/
 
     @Column(name="NOME" ,length = 35)
     private String nome;
     @Column(name="SOBRENOME",length = 50)
     private String sobrenome;
     @Id
-    @Column(name="CPF")
+    @Column(name="CPF",unique = true)
     private Long cpf;
     @Column(name="NASCIONALIDADE",length = 30)
     private String nascionalidade;

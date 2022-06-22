@@ -16,48 +16,43 @@ import java.util.Optional;
 public class CrudDeclaracaoUsuario {
 
 
-    private DeclaracaoUsuarioRepository dur;
+    private DeclaracaoUsuarioRepository repository;
 
     @Autowired
     public CrudDeclaracaoUsuario(DeclaracaoUsuarioRepository dur) {
-        this.dur = dur;
+        this.repository = dur;
     }
 
 
-
-    @GetMapping(path = "/GET/{cpf}")
-    @ResponseStatus(HttpStatus.ACCEPTED)
-    public Optional<DeclaracaoUsuario> getDeclaracao(@PathVariable Long cpf){
-        return dur.findById(cpf);
-    }
-//
-    @PostMapping(path = "/POST")
-    @ResponseStatus(HttpStatus.CREATED)
-    public DeclaracaoUsuario postDeclaracao(@RequestBody DeclaracaoUsuario body) {
-        return dur.save(body);
-    }
-//
-    @PutMapping(path = "/PUT")
-    @ResponseStatus(HttpStatus.ACCEPTED)
-    public DeclaracaoUsuario putDeclaracao(@RequestBody DeclaracaoUsuario body) {
-        return dur.save(body);
-    }
-//
-    @DeleteMapping(path = "/DELETE/{cpf}")
-    @ResponseStatus(HttpStatus.ACCEPTED)
-    public String deleteDeclaracao(@PathVariable Long cpf){
-        dur.deleteById(cpf);
-        return "Declaracao do CPF: " + cpf + " deletado com sucesso.";
-    }
-
-
-    @GetMapping(path = "/GET")
+    @GetMapping("/GET")
     @ResponseStatus(HttpStatus.ACCEPTED)
     public List<DeclaracaoUsuario> getAll(){
-        return dur.findAll();
+        return repository.findAll();
     }
 
-    
-
-
+//
+    @GetMapping("/GET/{cpf}")
+    @ResponseStatus(HttpStatus.ACCEPTED)
+    public Optional<DeclaracaoUsuario> getDeclaracao(@PathVariable Long cpf){
+        return repository.findById(cpf);
+    }
+//
+    @PostMapping("/POST")
+    @ResponseStatus(HttpStatus.CREATED)
+    public DeclaracaoUsuario postDeclaracao(@RequestBody DeclaracaoUsuario body) {
+        return repository.save(body);
+    }
+//
+    @PutMapping("/PUT")
+    @ResponseStatus(HttpStatus.CREATED)
+    public DeclaracaoUsuario putDeclaracao(@RequestBody DeclaracaoUsuario body) {
+        return repository.save(body);
+    }
+//
+    @DeleteMapping("/DELETE/{cpf}")
+    @ResponseStatus(HttpStatus.ACCEPTED)
+    public String deleteDeclaracao(@PathVariable Long cpf){
+        repository.deleteById(cpf);
+        return "Declaracao do CPF: " + cpf + " deletado com sucesso.";
+    }
 }
