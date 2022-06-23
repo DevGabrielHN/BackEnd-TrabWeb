@@ -155,23 +155,35 @@ input,select,textarea,.radios,.checks{
 
 
       .tituloHome{
-        margin-left: 12%;
+        margin-left: 15%;
       }
       .home{
       display: flex;
       }
 
-      .TextoHeader{
-        text-align: left;
-        font-family: 'Courier New', Courier, monospaceS;
-
-      }
-
       .video{
-      margin-right: 20%;
-      width: 500%;
+      margin-left: 15%;
+  
       }
 
-      .Esquerda{
-        margin-right: 0%;
-      }
+    .textoHome{
+      margin-left: 2%;
+      display: flex;
+    }
+
+
+    .imgHome{
+      width: 480px;
+       height: 300px;
+       margin-left: 6%;
+    }
+
+    .areaHome2{
+
+      display: flex;
+
+    }
+
+    .textoHome2{
+      margin-left: 3%;
+    }

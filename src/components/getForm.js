@@ -28,12 +28,16 @@ function GetForm(){
             const data = await res.json();
             const result = {
                data
-            };            
+            };
+            if(result.data == null){
+              result.data = 'ERRO 404 - CPF não encontrado' ;
+            }            
             setGetResult(fortmatResponse(result.data));
           } catch (err) {
             setGetResult(err.message);
           }
         }
+      
       } 
 
       

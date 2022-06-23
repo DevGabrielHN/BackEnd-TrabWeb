@@ -6,6 +6,7 @@ import GetForm from '../components/getForm';
 import {Route, BrowserRouter, Routes} from "react-router-dom"
 import PostForm from '../components/postForm';
 
+
 export default function AppRoutes(){
 
   const [formValues, setFormValues] = useState({nascionalidade: 'Brasileiro',estadoCivil: 'Solteiro'});
@@ -54,19 +55,19 @@ useEffect(() => {
 
 
 <br/>
-<div className='TextoHeader'>
-<p className='Esquerda'> Meu Imposto de Renda
-Em 2022 o imposto de renda completa 100 anos de existência.
-O imposto foi instituído com apenas um artigo e oito  incisos na Lei Orçamentária 
-de 31 de dezembro de 1922, publicada curiosamente em um domingo.
-Desde então, os valores arrecadados têm contribuído para o desenvolvimento do Brasil,
-financiando a saúde, educação, segurança e inúmeros serviços públicos prestados  ao cidadão 
-brasileiro.
-</p>
-</div>
 
-<div className='alinharvideo'>
-<iframe className='video' width="515" height="300" 
+<h3 className='textoHome'> Meu Imposto de Renda
+Em 2022 o imposto de renda completa 100 anos <br/>de existência.    
+O imposto foi instituído com apenas um artigo e oito<br/>  incisos na Lei Orçamentária 
+de 31 de dezembro de 1922, publicada<br/> curiosamente em um domingo.
+Desde então, os valores arrecadados têm<br/> contribuído para o desenvolvimento do Brasil,
+financiando a saúde,<br/> educação, segurança e inúmeros serviços públicos prestados  ao cidadão<br/> 
+brasileiro.
+</h3>
+
+
+<div >
+<iframe className='video' width="500" height="300" 
 src="https://www.youtube.com/embed/ThGcnGkx4gw" 
 title="YouTube video player" frameborder="0" 
 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
@@ -74,7 +75,25 @@ allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; pic
 </div>
 
 </div>
+<br/>
+<br/>
+<div className='areaHome2'>
+<img className='imgHome' src='https://dcomercio.com.br/public/upload/gallery/2020/irpf-impostos-2022.jpg' />
+<h3 className='textoHome2' >O órgão foi criado a partir da publicação doDecreto nº 63.659,
+     de 20 de novembro <br/> de 1968. A nova secretaria substituiu a 
+     Direção-Geral da Fazenda Nacional e transformou diversos 
+     departamentos existentes em coordenações (arrecadação, tributação, 
+     fiscalização e informações econômico-fiscais). A Lei nº 11.457, de 
+     16 de março de 2007, mudou a denominação para Secretaria da Receita 
+     Federal do Brasil,<br/> na época chamada de Super Receita, já que passara 
+     a englobar as estruturas de arrecadação e fiscalização dos ministérios
+      da Fazenda e da Previdência Social.<br/> O intuito foi reorganizar a administração 
+      tributária federal objetivando a redução<br/> dos custos de manutenção de duas 
+      instituições distintas (Secretaria da Receita <br/> Federal e Secretaria da Receita
+       Previdenciária, do Ministério da Previdência Social), melhorando as condições
+        de fiscalização e arrecadação dos tributos controlados<br/> pela União.</h3>
         </div>
+            </div>
             }/>
         <Route path="/tabela" element= {
             <div>
@@ -206,15 +225,7 @@ allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; pic
         <Route path="/quem-somos" element= {
         <div>
 
-            <br/>
-
-            <div className='blocoIntegrantes'>
-                <img className='fotointegrantes' src='https://pbs.twimg.com/media/FQ9z6L-XEAY_wy-?format=png&name=small'/>
-
-                    <h4 className='infoIntegrantes'>nome: André Luis Ferreira de Lima Júnior </h4>
-                    <h4 className='infoIntegrantes'>RA: 202102668905</h4>              
-
-            </div>   
+            <br/> 
 
             <br/>
 

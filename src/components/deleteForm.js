@@ -20,7 +20,7 @@ const baseURL = "http://localhost:8080/API/DELETE";
       try {
         const res = await fetch(`${baseURL}/${id}`, { method: "delete" });
         const data = await res.json();
-        setDeleteResult("CPF inválido!");
+        setDeleteResult('ERRO 404 - CPF não encontrado' );
       } catch (err) {
         setDeleteResult("Declaração deletada com sucesso!");
       }
